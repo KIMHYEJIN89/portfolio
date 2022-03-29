@@ -1,0 +1,1107 @@
+@charset "utf-8";
+
+/* header */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+header h1 {
+  position: absolute;
+  top: 90px;
+  left: -10px;
+  transform: rotate(-90deg);
+  transition: all 0.5s ease;
+}
+
+header h1 a {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+header.white h1 {
+  color: #fff;
+}
+
+header.white h1 a {
+  color: #fff;
+}
+
+header.white .topBtn:before,
+header.white .topBtn:after {
+  background: #fff;
+}
+
+header .topBtn {
+  width: 40px;
+  height: 34px;
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  font-size: 1px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+header .topBtn:before,
+.topBtn:after {
+  display: block;
+  height: 5px;
+  position: absolute;
+  content: "";
+  transition: all 0.5s ease;
+  transform: rotate(0);
+  background: #333;
+}
+
+header .topBtn:before {
+  top: 20%;
+  left: 0;
+  right: 0;
+}
+
+header .topBtn:after {
+  bottom: 20%;
+  left: 10%;
+  right: 10%;
+}
+
+header .modalNav {
+  width: 100%;
+  height: 0;
+  font-weight: 400;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+header .modalNav > ul {
+  height: 0;
+  overflow: hidden;
+}
+
+header .modalNav > ul > li {
+  padding: 20px 0;
+  font-size: 0;
+  transition: all 0s ease;
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+header .modalNav > ul > li > a {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+}
+
+header .modalNav > ul > li > a:after {
+  display: block;
+  width: 0;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+header .modalNav > ul > li > a:hover:after {
+  width: 100%;
+}
+
+header .modalNav > ul > li > ul {
+  padding: 20px 0 0 20px;
+}
+
+header .modalNav > ul > li > ul > li {
+  position: relative;
+  padding: 10px 0 10px 35px;
+  color: #fff;
+}
+
+header .modalNav > ul > li > ul > li:nth-child(2) a {
+  cursor: default;
+}
+
+header .modalNav > ul > li > ul > li:before {
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -1px;
+  vertical-align: middle;
+  content: "";
+  background-color: #fff;
+}
+
+header.open {
+  bottom: 0;
+  color: #fff;
+  background: #101010;
+}
+
+header.open .topBtn:before,
+header.open .topBtn:after {
+  background: #fff;
+}
+
+header.open .topBtn:before {
+  top: 43%;
+  transform: rotate(-45deg);
+}
+
+header.open .topBtn:after {
+  bottom: 42%;
+  left: 0;
+  right: 0;
+  transform: rotate(45deg);
+}
+
+header.open .modalNav {
+  display: table;
+  height: 100%;
+  margin-left: -18px;
+  visibility: visible;
+}
+
+header.open .modalNav > ul {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+  padding-left: 300px;
+}
+
+header.open .modalNav > ul > li {
+  transition: all 0.3s ease;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+header.open .modalNav > ul > li:nth-child(1) {
+  transition-delay: 0;
+}
+
+header.open .modalNav > ul > li:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+header.open .modalNav > ul > li:nth-child(3) {
+  transition-delay: 0.4s;
+}
+
+header.open .modalNav > ul > li:nth-child(4) {
+  transition-delay: 0.6s;
+}
+
+header.open .modalNav > ul > li:nth-child(5) {
+  transition-delay: 0.8s;
+}
+
+header.open .modalNav > ul > li a {
+  color: #fff;
+}
+
+header.open .pageNav {
+  display: none;
+}
+
+/* :::::::::::::::::::::::::::::: 컨텐츠 영역 :::::::::::::::::::::::::::::: */
+/* 공통 영역  */
+.title {
+  display: inline-block;
+  margin-bottom: 50px;
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.title:before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: #c0baba;
+}
+
+.page {
+  width: 100%;
+  height: 937px;
+  display: table;
+  text-align: center;
+}
+
+.page .inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* visual */
+.visual {
+  position: relative;
+}
+
+.visual .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  background: linear-gradient(0deg, #db8cf7 10%, #8ac0ff 80%);
+}
+
+.visual ul {
+  z-index: 99;
+  position: absolute;
+  right: 30px;
+}
+
+.visual ul li {
+  display: inline-block;
+  margin: 15px;
+}
+
+.visual ul li a {
+  color: #fff;
+  font-size: 20px;
+}
+
+.visual .midText {
+  position: absolute;
+  z-index: 99;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.visual .midText p {
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.visual .midText .subTxt {
+  margin-top: 20px;
+  line-height: 28px;
+  font-size: 20px;
+}
+
+.visual .line-1 {
+  z-index: 15;
+  opacity: 0.5;
+}
+
+.visual .line-2 {
+  z-index: 10;
+  opacity: 0.7;
+}
+
+.visual .line-3 {
+  z-index: 5;
+}
+
+.visual .wave {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+}
+
+.visual .wave1 {
+  -webkit-background-size: 50% 80px;
+  background-size: 50% 80px;
+}
+
+.visual .wave2 {
+  -webkit-background-size: 50% 100px;
+  background-size: 50% 100px;
+  animation: animate 12s linear infinite;
+}
+
+.visual .wave3 {
+  -webkit-background-size: 50% 80px;
+  background-size: 50% 80px;
+  animation: animate 18s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.5);
+  }
+
+  50% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+
+/* about */
+.about .historyArea {
+  width: 70%;
+  margin: 50px auto;
+}
+
+.about .historyArea:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.about .historyArea h3 {
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #333;
+  font-size: 15px;
+}
+
+.about .info p {
+  line-height: 28px;
+  font-size: 18px;
+}
+
+.about .historyArea > div {
+  width: calc(50% - 20px);
+  margin-left: 20px;
+  height: 490px;
+  float: left;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.about .historyArea > div:first-child {
+  margin-left: 0;
+}
+
+.about .historyArea .list {
+  padding: 30px 0;
+}
+
+.about .historyArea .list dl {
+  position: relative;
+  margin-left: 20px;
+  padding: 0 20px 20px 40px;
+  line-height: 24px;
+  text-align: left;
+  word-break: keep-all;
+}
+
+.about .historyArea .list dl:last-child {
+  padding-bottom: 0;
+}
+
+.about .historyArea .list dl:before {
+  display: block;
+  content: "";
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  left: 10px;
+  top: 6px;
+  background: #ebebeb;
+}
+
+.about .historyArea .list dl:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  margin-top: 6px;
+  margin-left: 4px;
+  background: #fff;
+  border: 4px solid #333;
+  border-radius: 100%;
+  z-index: ;
+}
+
+.about .historyArea .list dl dt span {
+  font-size: 15px;
+  color: #a49d9d;
+}
+
+/* skill */
+.skillList:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.skillList {
+  width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skillList li {
+  width: 33.33%;
+  margin-bottom: 100px;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.skillList li:nth-child(1) .gaugeWrap .gaugeChartSeg {
+  stroke: #8ac0ff;
+}
+
+.skillList li:nth-child(2) .gaugeWrap .gaugeChartSeg {
+  stroke: #92baff;
+}
+
+.skillList li:nth-child(3) .gaugeWrap .gaugeChartSeg {
+  stroke: #a0b2fe;
+}
+
+.skillList li:nth-child(4) .gaugeWrap .gaugeChartSeg {
+  stroke: #b1a8fb;
+}
+
+.skillList li:nth-child(5) .gaugeWrap .gaugeChartSeg {
+  stroke: #cd93f9;
+}
+
+.skillList .gaugeWrap {
+  position: relative;
+  width: 206px;
+  height: 206px;
+  margin: 0 auto;
+}
+
+.skillList .gaugeWrap .gaugeUnit {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #bec2c7;
+  font-size: 14px;
+}
+
+.skillList .gaugeWrap .gaugeCont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 120px;
+  text-align: center;
+  line-height: 1;
+}
+
+.skillList .gaugeWrap .gaugeScore {
+  margin-bottom: 5px;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.skillList .gaugeWrap .gaugeScore .fontNum {
+  display: inline-block;
+  padding-right: 2px;
+  font-size: 47px;
+  font-weight: 800;
+  vertical-align: -1px;
+  letter-spacing: -1px;
+}
+
+.skillList .gaugeWrap .gaugeTxt {
+  color: #9b9fa8;
+  font-size: 15px;
+}
+
+.skillList .gaugeWrap .gaugeChartBg {
+  stroke: #eff1f5;
+  stroke-width: 2px;
+}
+
+.skillList .gaugeWrap .gaugeChartSeg {
+  transform-origin: 0 0;
+  stroke: #db8cf7;
+  stroke-width: 4px;
+  stroke-linecap: round;
+  will-change: auto;
+}
+
+.skillList .gaugeWrap .text {
+  margin-top: 10px;
+}
+
+.skillList .gaugeWrap.is-animated .gaugeChartSeg {
+  transition: stroke-dashoffset 1.5s ease-in-out;
+}
+
+/* portfolio */
+.portfolio {
+  text-align: center;
+}
+
+.portfolio .text {
+  margin-bottom: 40px;
+}
+
+.portfolio ul {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.portfolio ul:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.portfolio ul li {
+  position: relative;
+  width: calc(25% - 20px);
+  margin-bottom: 20px;
+  margin-left: 20px;
+  float: left;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 1px 2px 6px 1px rgb(0 0 0 / 7%);
+  border: 1px solid #dadada;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.portfolio ul li .thum {
+  padding: 60% 3.5%;
+}
+
+.portfolio ul li[data-type="1"] .thum {
+  background: url("../images/portfolio_01.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.portfolio ul li[data-type="2"] .thum {
+  background: url("../images/portfolio_02.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.portfolio ul li[data-type="3"] .thum {
+  background: url("../images/portfolio_03.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.portfolio ul li[data-type="4"] .thum {
+  background: url("../images/portfolio_04.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.portfolio ul li[data-type="5"] .thum {
+  background: url("../images/portfolio_05.jpg") left center no-repeat;
+  background-size: cover;
+}
+
+.portfolio ul li[data-type="6"] .thum {
+  background: url("../images/portfolio_06.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.portfolio ul li[data-type="7"] .thum {
+  background: url("../images/portfolio_07.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.portfolio ul li[data-type="8"] .thum {
+  background: url("../images/portfolio_08.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.portfolio ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.portfolio ul li a .overlay {
+  display: table;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(
+    -45deg,
+    rgba(219, 140, 247, 0.85),
+    rgba(138, 192, 255, 0.85)
+  );
+  border-radius: 4px;
+  opacity: 0;
+}
+
+.portfolio ul li a .overlay .inner {
+  display: table-cell;
+  padding: 0 15px;
+  vertical-align: middle;
+}
+
+.portfolio ul li a .overlay .tit {
+  margin-bottom: 10px;
+  line-height: 32px;
+  font-size: 25px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.portfolio ul li a .overlay p {
+  line-height: 24px;
+  color: #fff;
+}
+
+.portfolio ul li a:hover .overlay {
+  opacity: 1;
+}
+
+.portfolio .mobileDesc {
+  margin: 30px 0;
+}
+
+.portfolio .mobileDesc p {
+  font-size: 14px;
+}
+
+/* contact */
+.contact {
+  position: relative;
+  background: #8ac0ff;
+}
+
+.contact .text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+}
+
+.contact .text strong {
+  display: block;
+  margin-bottom: 50px;
+  line-height: 35px;
+  font-size: 70px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.contact .text a {
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  background: #fff;
+  font-size: 25px;
+}
+
+.goTop {
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  z-index: 99;
+  display: none;
+}
+
+.goTop button {
+  display: block;
+  width: 80px;
+  height: 80px;
+  background: url("../images/top.png") center center no-repeat;
+  background-size: 80px auto;
+  z-index: 10;
+}
+
+#scroll-down-animation {
+  position: absolute;
+  bottom: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+}
+
+#scroll-down-animation h2 {
+  margin-top: 20px;
+  color: #fff;
+  font-weight: 200;
+  font-size: 16px;
+}
+
+.mouse {
+  margin: 0 auto;
+  display: block;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  height: 50px;
+  width: 25px;
+  position: relative;
+}
+
+.move {
+  position: absolute;
+  background-color: #fff;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: move 2s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(-50%, 0px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translate(-50%, 20px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, 40px);
+    opacity: 0;
+  }
+}
+
+.boxArea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.boxArea li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 25px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: boxAnimate 20s linear infinite;
+  bottom: -150px;
+}
+
+.boxArea li:nth-child(1) {
+  left: 86%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.boxArea li:nth-child(2) {
+  left: 12%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 1.5s;
+  animation-duration: 10s;
+}
+
+.boxArea li:nth-child(3) {
+  left: 70%;
+  width: 100px;
+  height: 100px;
+  animation-delay: 5.5s;
+}
+
+.boxArea li:nth-child(4) {
+  left: 42%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 15s;
+}
+
+.boxArea li:nth-child(5) {
+  left: 65%;
+  width: 40px;
+  height: 40px;
+  animation-delay: 0s;
+}
+
+.boxArea li:nth-child(6) {
+  left: 15%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3.5s;
+}
+
+@keyframes boxAnimate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-800px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  header.open .modalNav > ul {
+    padding-left: 200px;
+  }
+
+  header .modalNav > ul > li {
+    font-size: 40px;
+  }
+
+  header .modalNav > ul > li > ul > li {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 1900px) {
+  .portfolio ul {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  html,
+  body {
+    overflow-y: auto;
+  }
+
+  header:before {
+    display: block;
+    height: 66px;
+    content: "";
+    background: #fff;
+    border-bottom: 1px solid #dadada;
+  }
+
+  header h1 {
+    top: 25px;
+    left: 50%;
+    margin-left: -46px;
+    color: #fff;
+    transform: rotate(0);
+  }
+
+  header h1 a {
+    color: #333 !important;
+  }
+
+  header .topBtn:before,
+  header .topBtn:after {
+    background: #333 !important;
+  }
+
+  header .topBtn {
+    width: 30px;
+    top: 15px;
+    right: 20px;
+  }
+
+  header .pageNav {
+    display: none;
+  }
+
+  header.open .modalNav {
+    margin-top: -100px;
+  }
+
+  header.open .modalNav > ul {
+    padding-left: 100px;
+  }
+
+  header.open .modalNav > ul > li a {
+    font-size: 20px;
+  }
+
+  header .modalNav > ul > li {
+    padding: 10px 0;
+    font-size: 20px;
+  }
+
+  header .modalNav > ul > li > ul {
+    padding: 20px 0 0 0;
+  }
+
+  header .modalNav > ul > li > ul > li {
+    padding: 5px 0 5px 10px;
+    font-size: 15px;
+  }
+
+  header .modalNav > ul > li > ul > li:before {
+    width: 5px;
+  }
+
+  .page {
+    height: auto !important;
+  }
+
+  .title {
+    margin-bottom: 20px;
+    font-size: 35px;
+  }
+
+  .visual {
+    height: 720px !important;
+  }
+
+  .visual .midText p {
+    line-height: 38px;
+    font-size: 30px;
+  }
+
+  .visual .midText .subTxt {
+    font-size: 16px;
+  }
+
+  .about .historyArea {
+    width: auto;
+    margin: 50px 20px;
+  }
+
+  .about .historyArea > div {
+    width: 100%;
+    height: auto;
+    float: none;
+    margin: 0;
+  }
+
+  .about .info p {
+    font-size: 16px;
+  }
+
+  .portfolio {
+    margin-bottom: 20px;
+  }
+
+  .portfolio .text {
+    padding: 0 20px;
+    line-height: 23px;
+  }
+
+  .portfolio ul li a .overlay {
+    display: block;
+    background: none;
+    opacity: 1;
+  }
+
+  .portfolio ul li a .overlay .inner {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 98%;
+    padding: 10% 0;
+  }
+
+  .portfolio ul li a .overlay .inner .tit {
+    color: #333;
+    font-size: 16px;
+  }
+
+  .portfolio ul li a .overlay .inner p {
+    color: #333;
+    font-size: 14px;
+  }
+
+  .portfolio ul {
+    width: 100%;
+    padding: 0 10px;
+    margin-left: -20px;
+  }
+
+  .portfolio ul li {
+    width: calc(33.33% - 20px);
+    margin-bottom: 150px;
+  }
+
+  .contact {
+    height: 340px !important;
+  }
+
+  .contact .text strong {
+    font-size: 30px;
+  }
+
+  .contact .text strong a {
+    font-size: 18px;
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+  }
+
+  .skill {
+    margin-bottom: 30px;
+  }
+
+  .skillList {
+    display: block;
+    width: auto;
+    margin-left: -20px;
+  }
+
+  .skillList .gaugeWrap {
+    width: 156px;
+    height: 156px;
+    margin: 0 auto;
+  }
+
+  .skillList .gaugeWrap .gaugeScore .fontNum {
+    font-size: 40px;
+  }
+
+  .skillList li {
+    display: block;
+    float: left;
+    width: calc(50% - 20px);
+    padding: 0;
+    margin-left: 20px;
+    margin-bottom: 50px;
+  }
+
+  .goTop button {
+    width: 60px;
+    height: 60px;
+    background-size: 60px auto;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .portfolio ul li {
+    width: calc(50% - 20px);
+    margin-bottom: 180px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .skWrap {
+    width: 100%;
+  }
+
+  .skillList .gaugeWrap {
+    width: 146px;
+    height: 146px;
+  }
+}
